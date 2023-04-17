@@ -23,42 +23,57 @@ function showSlides(n) {
 
 //FORMULARIO CONTACTO
 
-const formulario = document.getElementById('formulario-contacto');
-const nombreInput = document.getElementById('nombre');
-const emailInput = document.getElementById('email');
-const mensajeInput = document.getElementById('mensaje');
+const formulario = document.getElementById("formulario-contacto");
+formulario.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevenir el comportamiento predeterminado del envío del formulario
+  
+  const nombre = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const mensaje = document.getElementById("mensaje").value;
+  
+  if (nombre !== "" && email !== "" && mensaje !== "") {
+    Toastify({
 
-formulario.addEventListener('submit', (event) => {
-  // Verificar si los campos están completos
-  if (!nombreInput.value || !emailInput.value || !mensajeInput.value) {
-    // Evitar que se envíe el formulario
-    event.preventDefault();
-
-    // Mostrar mensaje de error al usuario
-    const errorMensaje = document.getElementById('error-mensaje');
-    errorMensaje.innerHTML = 'Por favor, completa todos los campos';
+      text: "Mensaje Enviado",
+      style: {
+        background: "#3c7fd8",
+      },
+      duration: 3000
+      
+      }).showToast();
+    formulario.reset(); // Reiniciar el formulario
+  } else {
+    document.getElementById("error-mensaje").textContent = "Por favor, complete todos los campos"; // Mostrar mensaje de error si los campos requeridos no están completos
   }
 });
+
 
 
 //FORMULARIO RECLAMO
-const formulario2 = document.getElementById('formulario-reclamo');
-const nombreInput2 = document.getElementById('nombre-reclamo');
-const emailInput2 = document.getElementById('email-reclamo');
-const mensajeInput2 = document.getElementById('mensaje-reclamo');
+const formulario2 = document.getElementById("formulario-reclamo");
+formulario2.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevenir el comportamiento predeterminado del envío del formulario
+  
+  const nombre = document.getElementById("nombre-reclamo").value;
+  const email = document.getElementById("email-reclamo").value;
+  const mensaje = document.getElementById("mensaje-reclamo").value;
+  
+  if (nombre !== "" && email !== "" && mensaje !== "") {
+    Toastify({
 
-
-formulario2.addEventListener('submit', (event) => {
-  // Verificar si los campos están completos
-  if (!nombreInput2.value || !emailInput2.value || !mensajeInput2.value) {
-    // Evitar que se envíe el formulario
-    event.preventDefault();
-
-    // Mostrar mensaje de error al usuario
-    const errorMensaje2 = document.getElementById('error-mensaje2');
-    errorMensaje2.innerHTML = 'Por favor, completa todos los campos';
+      text: "Mensaje Enviado",
+      style: {
+        background: "#3c7fd8",
+      },
+      duration: 3000
+      
+      }).showToast();
+    formulario.reset(); // Reiniciar el formulario
+  } else {
+    document.getElementById("error-mensaje2").textContent = "Por favor, complete todos los campos"; // Mostrar mensaje de error si los campos requeridos no están completos
   }
 });
+
 
 
 
