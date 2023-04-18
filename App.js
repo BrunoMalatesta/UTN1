@@ -97,80 +97,8 @@ function submitForm(event) {
 
 
 
-//FORMULARIO RECLAMO
-
-// Definir reglas de validación
-const constraints = {
-  firstName: {
-    presence: true,
-    length: {
-      minimum: 1,
-      maximum: 50
-    }
-  },
-  lastName: {
-    presence: true,
-    length: {
-      minimum: 1,
-      maximum: 50
-    }
-  },
-  phoneNumber: {
-    presence: true,
-    format: {
-      pattern: '[0-9]{10,12}',
-      message: 'Debe contener entre 10 y 12 dígitos numéricos'
-    }
-  },
-  message: {
-    presence: true,
-    length: {
-      minimum: 1,
-      maximum: 100
-    }
-  }
-};
 
 
-// Obtener el formulario por su ID
-const form = document.getElementById('myForm');
-
-// Manejador de envío del formulario
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-
-  // Validar el formulario
-  const validationResult = validate(form, constraints);
-
-  // Verificar si el formulario es válido
-  if (validationResult === undefined) {
-    // Obtener los valores del formulario
-    const firstName = form.elements.firstName.value;
-    const lastName = form.elements.lastName.value;
-    const phoneNumber = form.elements.phoneNumber.value;
-    const message = form.elements.message.value;
-
-    // Crear un objeto con los valores del formulario
-    const reclamo = {
-      firstName: firstName,
-      lastName: lastName,
-      phoneNumber: phoneNumber,
-      message: message
-    };
-
-    // Mostrar alerta con resultado del envío y valores del formulario
-    Toastify({
-      text: "Mensaje Enviado",
-      style: {
-        background: "green",
-      },
-      duration: 3000
-    }).showToast();
-    console.log(reclamo)
-    // Reiniciar el formulario
-    form.reset();
-  }
-});
 
 
 

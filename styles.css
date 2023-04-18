@@ -193,8 +193,19 @@ form button[type="submit"] {
   cursor: pointer;
 }
 
-.Reclamo{
-  padding-top: 100px;
+.descargar{
+  background-color: #3c7fd8;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  width: 70px;
+}
+
+#esc{
+  width: 60%;
+  height: 100px;
+  background-color: #8dbda2;
 }
 
 .errormensaje{
