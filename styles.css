@@ -99,15 +99,8 @@ nav a {
 }
 
 .mostrar {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
 }
 
 @keyframes fade {
@@ -135,6 +128,31 @@ b{
   color: #fff;
   padding: 50px;
 }
+/* Sección de Frases */
+
+.frases{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color:white;
+  background-color: grey;
+  margin-top: 20px;
+}
+#quote{
+  margin-top: 20px;
+}
+
+#btnfrase{
+  background-color: #3c7fd8;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* Sección de contacto */
 
@@ -142,11 +160,11 @@ b{
   background-color: #fff;
   color: #333;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Formularios */
-
-
 
 form label {
   display: block;
@@ -156,15 +174,17 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  width: 100%;
+  width: 60%;
   padding: 10px;
   border: solid;
   border-radius: 3px;
   margin-bottom: 20px;
-  background-color: #3CB371;
+  background-color: #8dbda2;
+
 }
 
-form input[type="submit"] {
+form input[type="submit"],
+form button[type="submit"] {
   background-color: #3c7fd8;
   color: #fff;
   border: none;
@@ -173,9 +193,8 @@ form input[type="submit"] {
   cursor: pointer;
 }
 
-
-.espacio-formulario{
-  margin-bottom: 3rem;
+.Reclamo{
+  padding-top: 100px;
 }
 
 .errormensaje{
